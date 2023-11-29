@@ -1,4 +1,4 @@
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 import { clockDOM } from "./elementInstance";
 
 const updateClock = () => {

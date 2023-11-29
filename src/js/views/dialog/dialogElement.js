@@ -1,4 +1,5 @@
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
+
 import { dialogDOM } from "./elementInstance";
 import { v4 as uuid } from "uuid";
 
