@@ -1,0 +1,39 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --color-background-gradient-grey: linear-gradient(120deg, #fdfbfb 0%, #eeeeee 100%) no-repeat 0% / 100%;
+    --color-background-gradient-blue: linear-gradient(120deg, #a6c4d6 0%, #e2ebf0 100%) no-repeat 0% / 100%;
+    --special-background-btn: linear-gradient(120deg, #8f248d 0%, #749cc4 100%);
+    --urgent-background-todo: linear-gradient(120deg, rgba(143, 36, 141, 0.3) 0%, rgba(115, 154, 194, 0.3) 100%);
+    --primary-background-todo: linear-gradient(120deg, rgba(141, 141, 141, 0.3) 0%, rgba(70, 70, 70, 0.3) 100%);
+    --color-main-primary: #7585bf;
+    --color-main-primary-dark: #4a5b96;
+    --color-text-primary: rgb(61, 91, 129);
+    --color-text-primary-dark: rgb(29, 55, 90);
+    --color-main-grey: #8f8f8f;
+
+    --sl-input-focus-ring-color: #7585bf44;
+    --sl-input-border-color-focus: #8f8f8f;
+    --sl-color-primary-500: #9ba8d6;
+    --sl-color-primary-600: #7585bf;
+    --sl-color-primary-700: #4a5b96;
+  }
+}
+
+@layer utilities {
+  .bg-background-gradient-grey {
+    background: var(--color-background-gradient-grey);
+  }
+
+  .bg-background-gradient-blue {
+    background: var(--color-background-gradient-blue);
+  }
+
+  .gradient-animation {
+    background-size: 400%;
+    animation: backgroundGradient 4s linear infinite;
+  }
+}

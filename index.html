@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div
+        id="mainContainer"
+        class="bg-background-white flex flex-nowrap h-full w-full rounded-xl opacity-90 overflow-hidden"
+      >
+        <div
+          id="dashboard"
+          class="p-5 h-full w-full flex flex-col gap-3 shrink-0"
+        >
+          <div
+            class="clock shadow-md flex justify-between p-5 rounded-md bg-background-gradient-blue gradient-animation cursor-default"
+          >
+            <div class="flex flex-col justify-around gap-3">
+              <div id="date"></div>
+              <div id="weekDay" class="font-bold text-4xl leading-none"></div>
+            </div>
+            <div
+              id="time"
+              class="time text-light text-[48px] flex items-end leading-none"
+            ></div>
+          </div>
+          <div class="flex justify-center gap-3">
+            <div
+              class="urgent-number shadow-md flex flex-col p-5 rounded-md justify-around items-center bg-background-gradient-grey shrink w-full cursor-default"
+            >
+              <div class="number text-5xl">0</div>
+              <p class="title">Urgent</p>
+            </div>
+
+            <div
+              class="regular-number shadow-md flex flex-col p-5 rounded-md justify-around items-center bg-background-gradient-grey shrink w-full cursor-default"
+            >
+              <div class="number text-5xl">0</div>
+              <p class="title">Regular</p>
+            </div>
+            <div
+              class="done-number shadow-md flex flex-col p-5 rounded-md justify-around items-center bg-background-gradient-grey shrink w-full cursor-default"
+            >
+              <div class="number text-5xl">0</div>
+              <p class="title">Done</p>
+            </div>
+          </div>
+          <div
+            class="expend-btn shadow-md flex flex-col p-5 rounded-md justify-around items-center bg-background-gradient-grey shrink w-full cursor-pointer"
+          >
+            <sl-icon name="list-ul" class="text-5xl"></sl-icon>
+          </div>
+          <h6 class="text-left text-sm">Urgent Items</h6>
+          <div
+            class="todo-list"
+          >
+            <!-- todo items -->
+          </div>
+          <div>
+            <button
+              class="todo-create-btn button-special shadow-md h-12 w-full font-bold"
+            >
+              Add Item
+            </button>
+          </div>
+        </div>
+        
+        <div
+          id="total-items"
+          class="p-5 pt-0 h-full w-full flex flex-col gap-3 shrink-0"
+        >
+          <div class="back-btn py-5 flex items-center gap-3 cursor-pointer">
+            <sl-icon name="arrow-left-square-fill" class="icon"></sl-icon>
+            <span class="leading-none translate-y-[1px]">Back</span>
+          </div>
+          <h6 class="text-left text-sm">Total Items</h6>
+          <div
+            class="todo-list"
+          >
+            <!-- todo items -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <sl-dialog label="Todo" class="dialog-focus">
+      <form class="flex flex-col gap-3">
+        <sl-input
+          autofocus
+          placeholder="I have to remind myself ..."
+          required
+        ></sl-input>
+        <sl-textarea placeholder="description"></sl-textarea>
+        <sl-checkbox class="text-right">Mark this item urgent</sl-checkbox>
+        <div class="flex gap-2 justify-end">
+          <button class="button-primary text-sm w-14" type="submit">
+            Save
+          </button>
+          <button
+            class="dialog-close-btn button-cancel text-sm w-14"
+            type="button"
+          >
+            Close
+          </button>
+        </div>
+      </form>
+    </sl-dialog>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"
+    ></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

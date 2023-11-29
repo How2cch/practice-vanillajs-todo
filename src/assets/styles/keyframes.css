@@ -1,0 +1,19 @@
+@keyframes backgroundGradient {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes card-shadow {
+  0%,
+  100% {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.6);
+  }
+}

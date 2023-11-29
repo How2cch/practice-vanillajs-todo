@@ -1,0 +1,82 @@
+#mainContainer {
+  animation: card-shadow 10s linear infinite;
+}
+
+.button-special {
+  color: #FFF;
+  background: var(--special-background-btn);
+}
+
+.button-primary {
+  color: #FFF;
+  background: var(--color-main-primary);
+}
+
+.button-cancel {
+  color: #FFF;
+  background: var(--color-main-grey);
+}
+
+.todo-list {
+  @apply bg-background-gradient-grey gradient-animation flex flex-col gap-3 h-full items-center shrink overflow-y-auto rounded-md
+  flex flex-col gap-3 h-full items-center shrink overflow-y-auto rounded-md p-3 blur-[2];
+}
+
+.todo-item {
+  box-sizing: border-box;
+  background: var(--primary-background-todo);
+  width: 100%;
+  // height: 60px;
+  border-radius: 6px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #FFF;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+  &.urgent {
+    background: var(--urgent-background-todo);
+  }
+  &:hover {
+    filter: brightness(1.2);
+  }
+  &:active {
+    filter: brightness(0.8);
+  }
+  &:disabled {
+    opacity: 0.5;
+    filter: brightness(1);
+    cursor: not-allowed;
+  }
+  &.checked {
+    color: var(--color-main-primary);
+    opacity: 0.5;
+    p {
+      text-decoration: line-through;
+    }
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+  p {
+    flex-shrink: 1;
+    width: 100%;
+    color: var(--color-main-primary-dark);
+  }
+  .option {
+    display: flex;
+    gap: 8px;
+    .icon {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      padding: 8px;
+      border-radius: 4px;
+      transition: all 0.2s;
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+      }
+    }
+  }
+}

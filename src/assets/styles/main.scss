@@ -1,0 +1,108 @@
+@import "./tailwind.scss";
+@import "./todo.scss";
+@import "./keyframes.css";
+@font-face {
+  font-family: "GenSenRounded";
+  src: url("@/assets/fonts/GenSenRounded-R.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GenSenRounded";
+  src: url("@/assets/fonts/GenSenRounded-M.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GenSenRounded";
+  src: url("@/assets/fonts/GenSenRounded-B.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "GenSenRounded";
+  src: url("@/assets/fonts/GenSenRounded-H.ttf") format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "KronaOne-Regular";
+  src: url("@/assets/fonts/KronaOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  ::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: transparent;
+  }
+}
+
+body {
+  font-family: "GenSenRounded", "system-ui", "-apple-system",
+    "BlinkMacSystemFont", "sans-serif";
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-primary-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background: linear-gradient(to right, #b92b27, #1565c0) no-repeat 0% / 400%;
+  animation: backgroundGradient 10s ease infinite;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-decoration: none;
+  font-weight: normal;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s;
+  &:hover {
+    filter: brightness(1.2);
+  }
+  &:active {
+    filter: brightness(0.8);
+  }
+  &:disabled {
+    opacity: 0.5;
+    filter: brightness(1);
+    cursor: not-allowed;
+  }
+}
+
+main {
+  box-sizing: border-box;
+  max-width: 600px;
+  width: 100%;
+  height: 100vh;
+  padding: 40px 24px;
+  margin: 0 auto;
+  * {
+    box-sizing: border-box;
+  }
+}
